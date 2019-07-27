@@ -161,17 +161,16 @@ app.use(homePath, graphiqlExpress({
   endpointURL: '/graphql'
 }))
 
-app.listen(PORT, () => {
-  console.log(`Visit ${URL}:${PORT}${homePath}`)
-})
-
 app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-ap/build')));
   
 // Handle React routing, return all requests to React app
 app.get('*', function(req, res) {
   res.sendFile(path.join(__dirname, 'react-graphql/react-apollo-ap/build', 'index.html'));
-});
+})
 
+app.listen(PORT, () => {
+  console.log(`Visit ${URL}:${PORT}${homePath}`)
+})
 
 } catch (e) {
   console.log(e)
