@@ -12,7 +12,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '/react-graphql/react-apollo-ap/build')))
+app.use(express.static(path.join(__dirname, './react-graphql/react-apollo-ap/build')))
 
 
 const homePath = '/graphiql'
@@ -165,12 +165,11 @@ app.use(homePath, graphiqlExpress({
   endpointURL: '/graphql'
 }))
 
-app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-ap/build')));
+app.use(express.static(path.join(__dirname, './react-graphql/react-apollo-ap/build')));
   
 // Handle React routing, return all requests to React app
 app.get('*', function(req, res) {
-  res.sendFile('index.html', {root: path.join(__dirname, 'react-graphql/react-apollo-ap/build')});
-  console.log(__dirname);
+  res.sendFile('index.html', {root: path.join(__dirname, './react-graphql/react-apollo-ap/build')});
 });
 
 app.listen(PORT, () => {
