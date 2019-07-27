@@ -1,9 +1,7 @@
 import './SearchBox.css';
 import React, { Component } from 'react';
-import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import Post from './Post';
-import SearchPosts from './SearchPosts';
 import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset';
 import { debounce, throttle } from "throttle-debounce";
 

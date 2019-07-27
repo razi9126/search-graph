@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import { ApolloProvider } from 'react-apollo'
 import SearchBox from './components/SearchBox'
 // import SearchPosts from './components/SearchPosts'
 
@@ -13,7 +12,7 @@ function App() {
   return (
     <div>
       <nav className="navbar">
-        <a className="navbar-brand" href="">
+        <a className="navbar-brand" href="www.gihub.com">
           GraphQL in React - Demo app
         </a>
       </nav>
