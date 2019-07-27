@@ -1,6 +1,6 @@
 {
 	"presets": [
-		"latest"
+		"es2015"
 	],
 	"plugins": [
 		"syntax-async-functions",
