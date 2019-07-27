@@ -13,7 +13,7 @@ app.use(cors())
 
 const homePath = '/graphiql'
 const URL = 'http://localhost'
-const PORT = 4001
+const PORT = process.env.PORT || 4001;
 const MONGO_URL = 'mongodb://user1:abcd1234@ds147233.mlab.com:47233/surkhi'
 const limit = 10; // The number of results that we want to display
 

@@ -33,7 +33,7 @@ app.use((0, _cors2.default)());
 
 var homePath = '/graphiql';
 var URL = 'http://localhost';
-var PORT = 4001;
+var PORT = process.env.PORT || 4001;
 var MONGO_URL = 'mongodb://user1:abcd1234@ds147233.mlab.com:47233/surkhi';
 var limit = 10; // The number of results that we want to display
 
@@ -237,17 +237,15 @@ var start = exports.start = function _callee() {
 
                       case 2:
                         res = _context6.sent;
-
-                        console.log(res);
                         _context6.t0 = _index.prepare;
-                        _context6.next = 7;
+                        _context6.next = 6;
                         return regeneratorRuntime.awrap(MyPosts.findOne({ _id: res.insertedIds[0] }));
 
-                      case 7:
+                      case 6:
                         _context6.t1 = _context6.sent;
                         return _context6.abrupt('return', (0, _context6.t0)(_context6.t1));
 
-                      case 9:
+                      case 8:
                       case 'end':
                         return _context6.stop();
                     }
