@@ -166,7 +166,11 @@ app.use(homePath, graphiqlExpress({
 }))
 
 app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-ap/build')));
+
 app.get('/', function (req, res) {
+  res.send('Im running!');
+});
+app.get('/dy', function (req, res) {
   res.send('Im running!');
 });
 // Handle React routing, return all requests to React app
