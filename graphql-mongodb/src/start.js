@@ -165,8 +165,8 @@ app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-ap/build
   
 // Handle React routing, return all requests to React app
 app.get('*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'react-graphql/react-apollo-ap/build', 'index.html'));
-})
+  res.sendFile('index.html', {root: path.join(__dirname, '../react-graphql/react-apollo-ap/build')});
+});
 
 app.listen(PORT, () => {
   console.log(`Visit ${URL}:${PORT}${homePath}`)
