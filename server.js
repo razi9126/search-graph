@@ -2,6 +2,7 @@ const express = require('express');
 const { ApolloServer, gql } = require('apollo-server-express');
 const {MongoClient, ObjectId} = require('mongodb');
 const bodyParser = require('body-parser');
+const path = require('path');
 require('./config');
 
 const PORT = process.env.PORT || 4001;
@@ -100,6 +101,11 @@ const server = new ApolloServer({ typeDefs, resolvers });
 
 const app = express();
 server.applyMiddleware({ app });
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-ap/build')))
+
  
 app.listen(PORT, () =>
   console.log(`🚀 Server ready at http://localhost:4001${server.graphqlPath}`)
