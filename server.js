@@ -108,5 +108,5 @@ app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-ap/build
 
  
 app.listen(PORT, () =>
-  console.log(`🚀 Server ready at http://localhost:4001${server.graphqlPath}`)
+  console.log(`🚀 Server ready at http://localhost:${PORT}${server.graphqlPath}`)
 );
