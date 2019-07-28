@@ -108,7 +108,7 @@ server.applyMiddleware({ app });
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-app/build')))
+// app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-app/build')))
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
