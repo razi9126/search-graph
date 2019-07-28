@@ -73,15 +73,15 @@ class SearchBox extends Component{
     render(){
       return(
         <div>
-        <input name="text" type="text" placeholder="Search" 
-        value={this.state.searchTerm} 
-        onChange={e => this.changeQuery( e.target.value)}
-        />
-        <div className="row">
-        {this.state.results.map((singlePost, index) => (
-          <Post post={singlePost} index={index} />
-          ))}
-        </div>
+          <input name="text" type="text" placeholder="Search" 
+          value={this.state.searchTerm} 
+          onChange={e => this.changeQuery( e.target.value)}
+          />
+          <div className="gaadiex-list">
+          {this.state.results.map((singlePost, index) => (
+            <Post post={singlePost} key={index} />
+            ))}
+          </div>
         </div>
 
         );
