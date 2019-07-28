@@ -5,6 +5,7 @@ import {graphqlExpress, graphiqlExpress} from 'graphql-server-express'
 import {makeExecutableSchema} from 'graphql-tools'
 import cors from 'cors'
 import {prepare} from "../util/index"
+import {path} from 'path'
 
 
 const app = express()
@@ -49,18 +50,18 @@ export const start = async () => {
     // To create a text index with different field weights for the content field 
     // and the keywords field, include the weights option to the createIndex() method
     db.collection('myposts').createIndex( 
-      { 
-        postTitle: "text", 
-        postSummary: "text" 
-      },
-      {
-       weights: {
-         postTitle: 1.4,
-         postSummary: 1
-       },
-       name: "TextIndex"
-     }
-    )
+    { 
+      postTitle: "text", 
+      postSummary: "text" 
+    },
+    {
+     weights: {
+       postTitle: 1.4,
+       postSummary: 1
+     },
+     name: "TextIndex"
+   }
+   )
 
     // Searching the presence of a word in either the post title or the post summary.
     // db.collection('myposts').find( { $text: { $search: "java coffee shop" } } )
@@ -128,10 +129,10 @@ const resolvers = {
       // if (full.length < limit){
       //   // var partial = await MyPosts.find({'postTitle': re}).toArray();
 
-        var partial = await MyPosts.find({"$or": [
-             { "postTitle":  re },
-             { "postSummary": re },
-           ]}).toArray();
+      var partial = await MyPosts.find({"$or": [
+       { "postTitle":  re },
+       { "postSummary": re },
+       ]}).toArray();
         // full.concat(partial);
         // return full
 
