@@ -19,6 +19,7 @@ query PostSearch($sq: String) {
     postTitle
     postSummary
     tags
+    link
   }
 }
 `
@@ -76,7 +77,6 @@ class SearchBox extends Component{
         value={this.state.searchTerm} 
         onChange={e => this.changeQuery( e.target.value)}
         />
-        <button>Search</button>
         <div className="row">
         {this.state.results.map((singlePost, index) => (
           <Post post={singlePost} index={index} />

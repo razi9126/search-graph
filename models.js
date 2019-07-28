@@ -5,7 +5,8 @@ const postSchema = new Schema({
   postTitle: String,
   postSummary: String,
   tags: [String],
-  verdict: Boolean
+  verdict: Boolean,
+  link: String
 });
 
 postSchema.index({

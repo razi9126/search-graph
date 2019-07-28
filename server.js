@@ -26,6 +26,7 @@ type MyPost {
   postSummary: String!
   tags: [String]
   verdict: Boolean
+  link: String
 }
 
 type Mutation {
