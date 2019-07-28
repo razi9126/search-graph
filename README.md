@@ -1,19 +1,12 @@
-# GraphQL-MongoDB-Example
+# GraphQL Search
 
-All the important code is in `src/start.js`.
+### Server files
+- config.js
+- models.js
+- server.js
 
-Install, build and run:
+### Frontend files
+- Folder `react-graphql`
 
-```
-yarn install
-yarn run build
-yarn start
-```
+Folder `graphql-mongodb` is previous code. Had some issues with it. It's there only for reference if needed.
 
-For Local Development 
-
-You need to start Mongodb for Local development 
-
-```
-npm run startdev
-```
