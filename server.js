@@ -3,11 +3,11 @@ const { ApolloServer, gql } = require('apollo-server-express');
 const {MongoClient, ObjectId} = require('mongodb');
 const bodyParser = require('body-parser');
 const path = require('path');
+const { MyPosts } = require('./models');
 require('./config');
 
 const PORT = process.env.PORT || 4001;
 const MONGO_URL = 'mongodb://user1:abcd1234@ds147233.mlab.com:47233/surkhi'
-const { MyPosts } = require('./models');
 
 
 // Construct a schema, using GraphQL schema language
@@ -96,7 +96,11 @@ const resolvers = {
   },
 };
  
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ typeDefs, 
+  resolvers,
+  introspection: true,
+  playground: true,
+   });
 
 
 const app = express();
