@@ -6,7 +6,8 @@ import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset';
 import { debounce, throttle } from "throttle-debounce";
 
 
-const httpLink = new HttpLink({ uri: 'http://localhost:4004/graphql' })
+// const httpLink = new HttpLink({ uri: 'http://localhost:4004/graphql' })
+const httpLink = new HttpLink({ uri: 'https://graphql-search-surkhi.herokuapp.com/graphql' })
 const client = new ApolloClient({
   link: httpLink,
   cache: new InMemoryCache(),
