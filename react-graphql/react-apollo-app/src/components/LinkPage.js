@@ -14,7 +14,7 @@ const LinkPage = props => (
   		<h6>Tags</h6>
   		<div>
           {props.postObject.tags.map((tag, index) => (
-            <li>{tag}</li>
+            <li key = {index}>{tag}</li>
             ))}
         </div>
 
