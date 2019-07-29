@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <nav className="navbar">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href="/">
           GraphQL in React - Demo app
         </a>
       </nav>
