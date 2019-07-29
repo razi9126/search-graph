@@ -74,9 +74,10 @@ const resolvers = {
       // if (full.length < limit){
       //   // var partial = await MyPosts.find({'postTitle': re});
 
+        // uncomment { "postSummary": re }, to search in summary too
         var partial = await MyPosts.find({"$or": [
              { "postTitle":  re },
-             { "postSummary": re },
+             // { "postSummary": re },
            ]});
         // full.concat(partial);
         // return full

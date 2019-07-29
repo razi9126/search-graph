@@ -10,5 +10,12 @@
     margin-bottom: 4px;
     margin-right: 15px;
     border-radius: 30%;
+    border-bottom: 2px solid red;
+
+}
+
+h6 {
+	text-align-last: left;
+	color: grey;
 }
 .border-b-1 {border-bottom: 1px solid rgba(162,162,162,.16);}

@@ -69,7 +69,6 @@ class SearchBox extends Component{
       this.setState({ results: result.data.searchquery })
     }
 
-
     render(){
       return(
         <div>
@@ -83,7 +82,6 @@ class SearchBox extends Component{
             ))}
           </div>
         </div>
-
         );
     }
   }

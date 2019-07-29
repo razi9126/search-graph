@@ -18,7 +18,8 @@ Folder `graphql-mongodb` is previous code. Had some issues with it. It's there o
 mutation{
    createMyPost(postTitle:"Canvassing for tit-for-tat Senate motions in full swing",
      postSummary:"Senate secretariat asks president to select presiding officer for next week session; Shibli says no deal sought.",
-     tags:["Pakistan","senate","president"], verdict: true)
+     tags:["Pakistan","senate","president"], verdict: true),
+     link:"senate"
    {
      postTitle
      postSummary
