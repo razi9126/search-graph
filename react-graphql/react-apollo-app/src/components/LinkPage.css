@@ -19,4 +19,8 @@ h6 {
 	color: grey;
 }
 
+h2 {
+    text-align-last: left;
+    color: grey;
+}
 .border-b-1 {border-bottom: 1px solid rgba(162,162,162,.16);}

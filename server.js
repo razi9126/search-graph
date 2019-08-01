@@ -110,13 +110,10 @@ server.applyMiddleware({ app });
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-app/build')))
 
 if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
   app.use(express.static(path.join(__dirname, 'react-graphql/react-apollo-app/build')));
     
-  // Handle React routing, return all requests to React app
   app.get('*', function(req, res) {
     res.sendFile(path.join(__dirname, 'react-graphql/react-apollo-app/build', 'index.html'));
   });

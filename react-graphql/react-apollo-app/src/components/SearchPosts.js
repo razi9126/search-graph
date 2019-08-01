@@ -5,7 +5,7 @@ import gql from 'graphql-tag'
 import Post from './Post'
 
 const SearchPosts = (q) => (
-  console.log(q)
+  console.log(q);
   <Query
     query={gql`
       query {

@@ -1,26 +1,21 @@
-import React from 'react'
+import React, { Component } from 'react';
 import { Link, BrowserRouter as Router, Route } from "react-router-dom";
 import { Switch } from "react-router-dom";
 import LinkPage from './LinkPage';
 import App from '../App';
 import './Post.css';
 
-// 			<Route exact path="/page/:pageLink" component={()=> <LinkPage postObject={props.post} /> } />
+
+class Post extends Component{
 
 
-const Post = props => (
-  	<div className="gaadiex-list-item abc">
-  	<Router>
-  		<Switch>
-  		<React.Fragment>
-
-	  	<Link to={`/page/${props.post.link}`}><h6>{props.post.postTitle}</h6></Link>
-			<Route exact path="/page/:pageLink" component={()=> <LinkPage postObject={props.post} /> } />
-		</React.Fragment>
-		</Switch>
-
-  	</Router>
+render(){
+	const link = "/page/" + this.props.post.link +".html";
+return(
+  <div className="gaadiex-list-item abc">
+  	<a href={link}><h6>{this.props.post.postTitle}</h6></a>
 	</div>
 )
-
+}
+}
 export default Post

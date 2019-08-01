@@ -48,5 +48,24 @@ font-size: 18px;
 	padding: 0;
 	border-bottom: 2px solid rgba(162,162,162,.16);
 }
+
+.gaadiex-list-item i  {
+    float: left;
+    font-size:25px;
+    width: 80px;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 4px;
+    margin-right: 15px;
+    border-radius: 30%;
+    border-bottom: 2px solid red;
+
+}
+
+h6 {
+	text-align-last: left;
+	color: grey;
+}
+
 .gaadiex-list>.gaadiex-list-item {padding: 0 10px;}
 .border-b-1 {border-bottom: 1px solid rgba(162,162,162,.16);}

@@ -1,12 +1,10 @@
 import './App.css';
 import React from 'react';
 import SearchBox from './components/SearchBox'
-// import SearchPosts from './components/SearchPosts'
 
 // const client = new ApolloClient({
 //   uri: 'http://localhost:3001/graphiql',
 // });
-
 
 function App() {
   return (

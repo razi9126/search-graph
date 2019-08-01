@@ -4,9 +4,12 @@ import gql from 'graphql-tag';
 import Post from './Post';
 import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset';
 import { debounce, throttle } from "throttle-debounce";
+import { Link, BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
+import LinkPage from './LinkPage';
+import App from '../App.js'
 
-
-// const httpLink = new HttpLink({ uri: 'http://localhost:4004/graphql' })
+// const httpLink = new HttpLink({ uri: 'http://localhost:4001/graphql' })
 const httpLink = new HttpLink({ uri: 'https://graphql-search-surkhi.herokuapp.com/graphql' })
 const client = new ApolloClient({
   link: httpLink,
@@ -59,7 +62,6 @@ class SearchBox extends Component{
 
   _executeSearch = async () => {
     const { searchTerm } = this.state
-
       // The variable in "variables" should be the same name as in gql server
       const result = await client.query({
         query: SEARCH_QUERY,
@@ -68,6 +70,8 @@ class SearchBox extends Component{
 
       this.setState({ results: result.data.searchquery })
     }
+
+
 
     render(){
       return(
@@ -86,5 +90,9 @@ class SearchBox extends Component{
     }
   }
 
+// {this.state.results.map((singlePost, index) => (
+//             <Post post={singlePost} key={index} />
+//             ))
+//           }
   export default SearchBox;
 
