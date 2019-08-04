@@ -82,7 +82,8 @@ class SearchBox extends Component{
           />
           <div className="gaadiex-list">
           {this.state.results.map((singlePost, index) => (
-            <Post post={singlePost} key={index} />
+
+            <Post post={singlePost} term={this.state.searchTerm} key={index} />
             ))}
           </div>
         </div>

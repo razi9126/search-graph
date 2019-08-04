@@ -16,7 +16,12 @@
 
 h6 {
 	text-align-last: left;
-	color: grey;
+	color: #2F4F4F;
+}
+
+p.copy strong 
+{
+  font-weight:bold;
 }
 
 .border-b-1 {border-bottom: 1px solid rgba(162,162,162,.16);}
